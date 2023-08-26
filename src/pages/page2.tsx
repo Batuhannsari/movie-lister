@@ -1,21 +1,7 @@
-import { getMovies } from '@/redux/slices/movieSlice';
-import { useAppDispatch } from '@/redux/store';
 import { Button } from '@mui/material'
 import { useRouter } from 'next/router'
-import { useEffect } from 'react'
-
-
-export default function Home() {
-
+function page2() {
   const router = useRouter()
-  const dispatch = useAppDispatch();
-
-  useEffect(() => {
-    
-    dispatch(getMovies())
-
-  }, [])
-
 
   return (
     <>
@@ -25,3 +11,5 @@ export default function Home() {
     </>
   )
 }
+
+export default page2
