@@ -1,10 +1,10 @@
 import { PayloadAction, createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { Movie } from "@/ınterfaces/Movie";
+import { MovieType } from "@/ınterfaces/MovieType";
 import store from "../store";
 import { queryBuilder } from "@/utils/queryBuilder";
 
 interface MoviesSliceType {
-    list: Movie[];
+    list: MovieType[];
 }
 
 const initialState: MoviesSliceType = {

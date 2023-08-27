@@ -1,6 +1,4 @@
-import { PayloadAction, createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { Movie } from "@/ınterfaces/Movie";
-import store, { useAppDispatch } from "../store";
+import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 
 
 export interface FiltersSliceType {
@@ -29,7 +27,7 @@ export const filtersSlice = createSlice({
         },
         setType: (state, action: PayloadAction<"movie" | "series" | "episode">) => {
             state.type = action.payload
-        }
+        },
     },
 },);
 
