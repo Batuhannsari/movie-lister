@@ -1,7 +1,7 @@
 import { queryBuilder } from "@/utils/queryBuilder";
-import { ListType } from "@/ınterfaces/ListType";
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import store from "../store";
+import { ListType } from "@/ınterfaces/ListType";
 
 interface MoviesSliceType {
     list: ListType;

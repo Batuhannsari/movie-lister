@@ -2,7 +2,7 @@ import React from 'react'
 import styles from "./MoviesCardList.module.scss";
 import { useAppSelector } from '@/redux/store';
 import MovieCard from '../molecules/MovieCard';
-import { Grid } from '@mui/material';
+import { Alert, Grid } from '@mui/material';
 
 
 const MoviesCardList = () => {
@@ -13,21 +13,31 @@ const MoviesCardList = () => {
 
     return (
         <>
-            <Grid className={styles.layout} container spacing={4} >
-                {
-                    movies.list.Search.map((v, i) => {
+            {
+                movies.list.Response === "True" ?
+                    <Grid className={styles.layout} container spacing={4} >
+                        {
 
-                        return (
+                            movies.list.Search.map((v, i) => {
 
-                            <Grid key={i} item md={3}>
-                                <MovieCard data={v} />
-                            </Grid>
+                                return (
 
-                        )
+                                    <Grid key={i} item md={3}>
+                                        <MovieCard data={v} />
+                                    </Grid>
 
-                    })
-                }
-            </Grid>
+                                )
+
+                            })
+                        }
+                    </Grid>
+                    :
+                    <div className={styles.notFound}>
+                        <Alert variant="outlined" severity="warning">
+                            Aradığınızı bulamadık. Lütfen filtreleme seçeneklerini kontrol edip tekrar deneyin
+                        </Alert>
+                    </div>
+            }
         </>
     )
 }

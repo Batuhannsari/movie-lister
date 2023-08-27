@@ -1,7 +1,8 @@
 import { MovieType } from "./MovieType";
 
 export interface ListType {
-    Search: MovieType[];
-    totalResults: string;
-    Response: string
+    Search?: MovieType[];
+    totalResults?: string;
+    Response: string;
+    Error?: string;
 }

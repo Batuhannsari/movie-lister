@@ -41,6 +41,15 @@ const CustomThemeProvider = ({ children }) => {
                         }
                     }
                 },
+                MuiInputLabel: {
+                    defaultProps: {
+                    },
+                    styleOverrides: {
+                        root: {
+                            marginTop: 8,
+                        }
+                    },
+                },
                 MuiAutocomplete: {
                     defaultProps: {
                         color: "secondary"
