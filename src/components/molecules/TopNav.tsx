@@ -77,15 +77,21 @@ const TopNav = () => {
                         <Button onClick={(e) => {
                             setFiltersStates((prev) => ({ ...prev, type: "movie" }))
                             dispatch(setType("movie"))
-                        }} variant={`${filtersStates.type === "movie" ? "contained" : "outlined"}`} color={'secondary'} key="movie">Filmler</Button>
+                        }} variant={`${filtersStates.type === "movie" ? "contained" : "outlined"}`} color={'secondary'} key="movie">
+                            Filmler
+                        </Button>
                         <Button onClick={() => {
                             dispatch(setType("series"))
                             setFiltersStates((prev) => ({ ...prev, type: "series" }))
-                        }} variant={`${filtersStates.type === "series" ? "contained" : "outlined"}`} color={'secondary'} key="series">Diziler</Button>
-                        <Button onClick={() => {
+                        }} variant={`${filtersStates.type === "series" ? "contained" : "outlined"}`} color={'secondary'} key="series">
+                            Diziler
+                        </Button>
+                       {/*  <Button onClick={() => {
                             dispatch(setType("episode"))
                             setFiltersStates((prev) => ({ ...prev, type: "episode" }))
-                        }} variant={`${filtersStates.type === "episode" ? "contained" : "outlined"}`} color={'secondary'} key="episode">Dizi Bölümleri</Button>
+                        }} variant={`${filtersStates.type === "episode" ? "contained" : "outlined"}`} color={'secondary'} key="episode">
+                            Dizi Bölümleri
+                        </Button> */}
                     </ButtonGroup>
 
                     <Autocomplete

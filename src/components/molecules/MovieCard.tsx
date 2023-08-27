@@ -1,16 +1,24 @@
 import { MovieType } from '@/ınterfaces/MovieType';
 import React from 'react';
 import styles from "./MovieCard.module.scss";
+import { useRouter } from 'next/router';
 
 interface Iprops {
     data: MovieType
 }
 
 const MovieCard: React.FC<Iprops> = (props) => {
+    const router = useRouter()
 
     return (
         <>
-            <div className={styles.layout} style={{ background: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${props.data.Poster === "N/A" ? "/assets/notFound.svg" : props.data.Poster})`, }}>
+            <div onClick={() => {
+                router.replace({
+                    query: {
+                        imdbID: props.data.imdbID
+                    }
+                })
+            }} className={styles.layout} style={{ background: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${props.data.Poster === "N/A" ? "/assets/notFound.svg" : props.data.Poster})`, }}>
                 <div className={styles.top} >{props.data.Title}</div>
             </div>
         </>
