@@ -1,0 +1,19 @@
+.layout {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: var(--primary);
+    color: var(--white);
+    gap: 2rem;
+
+    .logo {
+        width: 10rem;
+        height: 2rem;
+    }
+
+    .search {
+        width: 100%;
+    }
+}
