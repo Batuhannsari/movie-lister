@@ -1,6 +1,6 @@
 import { CloseRounded } from '@mui/icons-material';
 import { LoadingButton } from '@mui/lab';
-import { Box, Dialog, DialogActions, DialogContent, DialogTitle, Divider, IconButton, Typography } from '@mui/material';
+import { Box, Button, Dialog, DialogActions, DialogContent, DialogTitle, Divider, IconButton, Typography } from '@mui/material';
 import { useRouter } from 'next/router';
 import React from 'react'
 
@@ -8,7 +8,16 @@ function MovieDetailModal() {
 
     const router = useRouter()
 
-    
+    const buttons =
+        [
+            {
+                children: "Kaydet",
+                variant: "contained",
+                color: "secondary",
+                type: "submit",
+            },
+        ]
+
 
     return (
 
@@ -30,19 +39,23 @@ function MovieDetailModal() {
                 </Box>
             </DialogTitle>
             <Divider />
-            {/*  <DialogContent sx={{ p: 2 }}>{props.children}</DialogContent>
+            <DialogContent sx={{ p: 2 }}>
+
+                <div>asd</div>
+
+            </DialogContent>
             {buttons && buttons.length > 0 && (
                 <>
                     <Divider />
                     <DialogActions sx={{ p: 2 }}>
                         {buttons.map((v, index) => (
-                            <LoadingButton key={index} {...v}>
+                            <Button key={index} >
                                 <div>asd</div>
-                            </LoadingButton>
+                            </Button>
                         ))}
                     </DialogActions>
                 </>
-            )} */}
+            )}
         </Dialog>
 
         /*  <CustomModal
