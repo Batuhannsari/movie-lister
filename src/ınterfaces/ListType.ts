@@ -1,7 +1,7 @@
+import { MovieType } from "./MovieType";
+
 export interface ListType {
-    title: string;
-    year: string;
-    imdbId: string;
-    type: string;
-    poster: string
+    Search: MovieType[];
+    totalResults: string;
+    Response: string
 }
