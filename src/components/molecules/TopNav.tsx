@@ -6,7 +6,7 @@ import { Autocomplete, Button, ButtonGroup, InputAdornment, MenuItem, Select, Te
 import { useAppDispatch, useAppSelector } from '@/redux/store';
 import { setSearch, setType, setYear } from '@/redux/slices/filtersSlicer';
 import { debounce } from 'lodash';
-import { getMovies } from '@/redux/slices/movieSlice';
+import { getMovies } from '@/redux/slices/movieOrSeriesSlice';
 import { Search } from "@mui/icons-material";
 import Link from 'next/link';
 

@@ -5,7 +5,7 @@ import { CloseRounded } from '@mui/icons-material';
 import { Box, Button, Dialog, DialogActions, DialogContent, DialogTitle, Divider, IconButton, Typography } from '@mui/material';
 import { useRouter } from 'next/router';
 
-function MovieDetailModal() {
+function SeriesDetailModal() {
 
     const router = useRouter()
     const dispatch = useAppDispatch()
@@ -24,7 +24,7 @@ function MovieDetailModal() {
 
 
         <CustomModal
-            title={"film modalı"}
+            title={"dizi modalı"}
             open={true}
             onClose={() => {
                 router.replace({ query: {} })
@@ -38,10 +38,9 @@ function MovieDetailModal() {
             },
         ]} */
         >
-            
 
         </CustomModal>
     );
 }
 
-export default MovieDetailModal
+export default SeriesDetailModal

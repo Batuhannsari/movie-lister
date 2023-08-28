@@ -1,7 +1,7 @@
 import { MovieType } from '@/ınterfaces/MovieType';
+import { useRouter } from 'next/router';
 import React from 'react';
 import styles from "./MovieCard.module.scss";
-import { useRouter } from 'next/router';
 
 interface Iprops {
     data: MovieType
