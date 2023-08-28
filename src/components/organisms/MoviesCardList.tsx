@@ -1,8 +1,7 @@
-import React from 'react'
-import styles from "./MoviesCardList.module.scss";
 import { useAppSelector } from '@/redux/store';
-import MovieCard from '../molecules/MovieCard';
 import { Alert, Grid } from '@mui/material';
+import MovieCard from '../molecules/MovieCard';
+import styles from "./MoviesCardList.module.scss";
 
 
 const MoviesCardList = () => {
@@ -15,7 +14,7 @@ const MoviesCardList = () => {
         <>
             {
                 movies.list.Response === "True" ?
-                    <Grid className={styles.layout} container spacing={4} >
+                    <Grid container spacing={4} >
                         {
 
                             movies.list.Search.map((v, i) => {

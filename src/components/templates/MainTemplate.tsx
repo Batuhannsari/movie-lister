@@ -1,10 +1,9 @@
-import React, { useEffect } from "react";
+import { getMovieOrSeriesById, setImdbID, setImdbIDForEpiosde } from "@/redux/slices/movieOrSeriesSlice";
+import { useAppDispatch } from "@/redux/store";
 import { Container } from "@mui/material";
-import TopNav from "../molecules/TopNav";
-import { useAppDispatch, useAppSelector } from "@/redux/store";
 import { useRouter } from "next/router";
-import { getMovieOrSeriesById, getMovies, setImdbID, setImdbIDForEpiosde } from "@/redux/slices/movieOrSeriesSlice";
-import { setType } from "@/redux/slices/filtersSlicer";
+import React, { useEffect } from "react";
+import TopNav from "../molecules/TopNav";
 
 interface Props {
     children: React.ReactNode;
@@ -14,12 +13,6 @@ function MainTemplate({ children }: Props) {
 
     const dispatch = useAppDispatch();
     const router = useRouter()
-    const movie = useAppSelector((state) => {
-        return state.movies.movie;
-    });
-    const series = useAppSelector((state) => {
-        return state.movies.series;
-    });
 
     useEffect(() => {
         if (router.query && router.query.imdbID) {
@@ -32,8 +25,6 @@ function MainTemplate({ children }: Props) {
         }
 
     }, [JSON.stringify(Object.values(router.query))])
-
-
 
     return (
         <>

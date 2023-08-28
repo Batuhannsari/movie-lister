@@ -8,10 +8,11 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    &:hover{
+
+    &:hover {
         cursor: pointer;
         font-size: 1.25rem;
-        
+
     }
 
     .top {

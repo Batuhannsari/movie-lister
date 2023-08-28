@@ -1,8 +1,8 @@
+import { getEpisodesDetailById, setImdbIDForEpiosde } from '@/redux/slices/movieOrSeriesSlice';
+import { useAppDispatch } from '@/redux/store';
 import { EpisodesType } from '@/ınterfaces/EpisodesType';
 import React from 'react';
 import styles from "./EpisodeCard.module.scss";
-import { useAppDispatch } from '@/redux/store';
-import { getEpisodesDetailById, setImdbIDForEpiosde } from '@/redux/slices/movieOrSeriesSlice';
 
 interface Iprops {
     data: EpisodesType

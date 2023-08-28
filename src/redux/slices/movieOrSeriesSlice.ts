@@ -1,11 +1,10 @@
 import { queryBuilder } from "@/utils/queryBuilder";
-import { PayloadAction, createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import store from "../store";
 import { ListType } from "@/ınterfaces/ListType";
-import { useRouter } from "next/router";
 import { MovieDetailType } from "@/ınterfaces/MovieDetailType";
 import { SeriesDetailType } from "@/ınterfaces/SeriesDetailType";
 import { SeriesWithSeasonType } from "@/ınterfaces/SeriesWithSeasonType";
+import { PayloadAction, createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import store from "../store";
 
 interface MoviesOrSliceType {
     list: ListType;

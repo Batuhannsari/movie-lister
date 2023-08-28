@@ -1,17 +1,17 @@
-import React from "react";
+import { CloseRounded } from "@mui/icons-material";
+import { LoadingButton, LoadingButtonProps } from "@mui/lab";
 import {
+  Box,
   Dialog,
   DialogActions,
   DialogContent,
+  DialogProps,
   DialogTitle,
-  Box,
+  Divider,
   IconButton,
   Typography,
-  Divider,
-  DialogProps,
 } from "@mui/material";
-import { LoadingButton, LoadingButtonProps } from "@mui/lab";
-import { CloseRounded } from "@mui/icons-material";
+import React from "react";
 
 type Props = {
   title: string;

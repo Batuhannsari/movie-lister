@@ -1,13 +1,13 @@
 import CustomModal from '@/components/atoms/CustomModal';
+import EpisodeCard from '@/components/atoms/EpisodeCard';
 import { getEpisodesBySeason, setSeason } from '@/redux/slices/movieOrSeriesSlice';
 import { useAppDispatch, useAppSelector } from '@/redux/store';
 import { Button, Divider, Grid } from '@mui/material';
 import dayjs from 'dayjs';
 import customParseFormat from 'dayjs/plugin/customParseFormat';
 import { useRouter } from 'next/router';
-import styles from "./SeriesDetailModal.module.scss";
 import { useEffect } from 'react';
-import EpisodeCard from '@/components/atoms/EpisodeCard';
+import styles from "./SeriesDetailModal.module.scss";
 
 function SeriesDetailModal() {
 

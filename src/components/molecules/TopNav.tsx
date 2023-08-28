@@ -1,14 +1,14 @@
-import React, { useCallback, useEffect, useState } from 'react'
-import styles from "./TopNav.module.scss";
-import logo from '@/assets/logo.svg'
-import Image from 'next/image';
-import { Autocomplete, Button, ButtonGroup, InputAdornment, MenuItem, Select, TextField, Typography } from '@mui/material';
-import { useAppDispatch, useAppSelector } from '@/redux/store';
+import logo from '@/assets/logo.svg';
 import { setSearch, setType, setYear } from '@/redux/slices/filtersSlicer';
-import { debounce } from 'lodash';
 import { getMovies } from '@/redux/slices/movieOrSeriesSlice';
+import { useAppDispatch, useAppSelector } from '@/redux/store';
 import { Search } from "@mui/icons-material";
+import { Autocomplete, Button, ButtonGroup, InputAdornment, TextField } from '@mui/material';
+import { debounce } from 'lodash';
+import Image from 'next/image';
 import Link from 'next/link';
+import React, { useCallback, useEffect, useState } from 'react';
+import styles from "./TopNav.module.scss";
 
 const TopNav = () => {
     const dispatch = useAppDispatch();
@@ -51,7 +51,7 @@ const TopNav = () => {
         <>
             <div className={styles.layout}>
 
-                <Image className={styles.logo} src={logo} alt='' />
+                <Image className={styles.logo} src={'/assets/logo.svg'} width={432} height={65} alt='' />
                 <div className={styles.search} >
                     <TextField
                         variant="outlined"
