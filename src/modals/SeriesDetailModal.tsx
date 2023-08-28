@@ -4,27 +4,22 @@ import { useAppDispatch, useAppSelector } from '@/redux/store';
 import { CloseRounded } from '@mui/icons-material';
 import { Box, Button, Dialog, DialogActions, DialogContent, DialogTitle, Divider, IconButton, Typography } from '@mui/material';
 import { useRouter } from 'next/router';
+import styles from "./SeriesDetailModal.module.scss";
 
 function SeriesDetailModal() {
 
     const router = useRouter()
     const dispatch = useAppDispatch()
-    const movie = useAppSelector((state) => {
-        return state.movies.movie;
-    });
     const series = useAppSelector((state) => {
         return state.movies.series;
     });
-
-    console.log('movie', movie)
-    console.log('series', series)
 
 
     return (
 
 
         <CustomModal
-            title={"dizi modalı"}
+            title={series.Title}
             open={true}
             onClose={() => {
                 router.replace({ query: {} })
@@ -38,7 +33,9 @@ function SeriesDetailModal() {
             },
         ]} */
         >
-
+            <div className={styles.layout}>
+                asd
+            </div>
         </CustomModal>
     );
 }
