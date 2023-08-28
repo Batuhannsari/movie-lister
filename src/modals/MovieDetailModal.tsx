@@ -19,7 +19,6 @@ function MovieDetailModal() {
     const formattedDate = dayjs(originalDate, { format: 'DD MMM YYYY' }).locale('tr').format('DD MMM YYYY');
 
     return (
-
         <CustomModal
             title={movie.Title}
             open={true}

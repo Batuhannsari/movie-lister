@@ -3,7 +3,7 @@ import { Container } from "@mui/material";
 import TopNav from "../molecules/TopNav";
 import { useAppDispatch, useAppSelector } from "@/redux/store";
 import { useRouter } from "next/router";
-import { getMovieOrSeriesById, getMovies, setImdbID } from "@/redux/slices/movieOrSeriesSlice";
+import { getMovieOrSeriesById, getMovies, setImdbID, setImdbIDForEpiosde } from "@/redux/slices/movieOrSeriesSlice";
 import { setType } from "@/redux/slices/filtersSlicer";
 
 interface Props {
@@ -27,6 +27,7 @@ function MainTemplate({ children }: Props) {
             dispatch(getMovieOrSeriesById())
         } else if (!router.query.imdbID) {
             dispatch(setImdbID(""))
+            dispatch(setImdbIDForEpiosde(""))
             dispatch(getMovieOrSeriesById())
         }
 

@@ -21,9 +21,6 @@ export default function Home() {
     return state.movies.series;
   });
 
-  console.log('movie', movie)
-  console.log('series', series)
-
   return (
     <>
       <MainTemplate>
